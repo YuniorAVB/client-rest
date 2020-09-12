@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLIENT REST</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wraper">
+      <header class="header">
+        <select class="header__methods" id="header-methods">
+          <option value="GET">GET</option>
+          <option value="POST">POST</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+        <input
+          type="text"
+          value="https://jsonplaceholder.typicode.com/photos?_limit=10"
+          class="header__url"
+          id="header-url"
+        />
+        <button id="btn_send" class="header__btnsend">SEND</button>
+      </header>
+
+      <section class="menu-items">
+        <ul>
+          <li>
+            <button id="btn-body" class="active">BODY</button>
+          </li>
+          <li>
+            <button id="btn-params" class="">PARAMS</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-items-body">
+        <table
+          class="table"
+          id="table
+        "
+        >
+          <thead>
+            <th>KEY</th>
+            <th>VALUE</th>
+            <th>DESCRIPTION</th>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td><input type="text" placeholder="Key" /></td>
+              <td><input type="text" placeholder="Value" /></td>
+              <td>
+                <input type="text" placeholder="Description" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="response" id="response"></section>
+      <div class="loading" id="loading">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
